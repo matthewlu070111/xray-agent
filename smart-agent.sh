@@ -67,7 +67,7 @@ guess_xray_bin() {
   if have_cmd xray; then
     command -v xray
   else
-    echo "/usr/local/bin/xray"
+    echo "/usr/local/etc/xray"
   fi
 }
 
@@ -282,7 +282,7 @@ main() {
 
   if [[ ! -x "$XRAY_BIN" ]]; then
     echo "[-] XRAY_BIN 不可执行：$XRAY_BIN"
-    echo "    先确认 xray 已安装，并给出正确路径（例如 /usr/local/bin/xray）"
+    echo "    先确认 xray 已安装，并给出正确路径（例如 /usr/local/etc/xray）"
     exit 1
   fi
 
